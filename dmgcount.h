@@ -7,6 +7,7 @@ class DmgCount
 {
     public:
     float dmg;
+    float alpha;
     bool crit;
     sf::Font font;
     sf::Text text;

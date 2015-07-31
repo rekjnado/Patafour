@@ -210,10 +210,7 @@ frame=temp.substr(temp.find_first_of("[")+1);
 name=line.substr(0,line.find_first_of("["));
 iname=GetObjectID(name);
 if(line!="") {
-cout << line << endl;
 objects[iname][animationid][atoi(frame.c_str())]=line.substr(line.find_first_of(":")+1);
-cout << objects[iname][animationid][atoi(frame.c_str())] << endl;
-cout << iname << " " << animationid << " " << frame << endl;
 } else {
 animationread=false;
 ShowFrame(animationid,0); }

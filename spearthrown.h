@@ -3,6 +3,7 @@
 
 #include <SFML/Graphics.hpp>
 #include <iostream>
+#include "dmgcount.h"
 
 class SpearThrown
 {
@@ -12,6 +13,8 @@ class SpearThrown
     float hspeed;
 
     bool isback;
+
+    DmgCount dmg;
 
     SpearThrown();
     void Throw(float hspd, float vspd, sf::Texture speartex);

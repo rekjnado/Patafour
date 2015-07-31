@@ -554,10 +554,13 @@ int Patafour::Main()
                         {
                             if(yaripons[i].spear.spear.getPosition().y>mission->entities[i2].GetObjectLocation().y-mission->entities[i2].objectamount*3)
                             {
-                                if(yaripons[i].spear.spear.getPosition().x>mission->entities[i2].GetObjectLocation().x-mission->entities[i2].objectamount*5)
+                                if(yaripons[i].spear.spear.getPosition().x<mission->entities[i2].GetObjectLocation().x+mission->entities[i2].objectamount*5)
                                 {
-                                    if(yaripons[i].spear.spear.getPosition().y>mission->entities[i2].GetObjectLocation().y-mission->entities[i2].objectamount*3)
+                                    if(yaripons[i].spear.spear.getPosition().y<mission->entities[i2].GetObjectLocation().y+mission->entities[i2].objectamount*3)
                                     {
+                                        //yaripons[i].spear.dmg.text.setPosition(yaripons[i].spear.spear.getPosition());
+                                        //yaripons[i].spear.dmg.alpha = 255;
+                                        //yaripons[i].spear.dmg.dmg = round(res.spearmindmg[atof(savecontainer.yaripons[i][6].c_str())]+res.hatdmg[atof(savecontainer.yaripons[i][6].c_str())]+res.spearmindmg[atof(savecontainer.yaripons[i][6].c_str())]/3*res.spearmindmg[atof(savecontainer.yaripons[i][8].c_str())]+(atof(savecontainer.yaripons[i][0].c_str())-1)*2);
                                         yaripons[i].spear.spear.setPosition(0,20000);
                                         cout << "GOT HIT" << endl;
                                     }

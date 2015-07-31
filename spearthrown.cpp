@@ -6,6 +6,7 @@ using namespace std;
 
 SpearThrown::SpearThrown()
 {
+    dmg.text.setPosition(0,20000);
     isback = false;
 }
 
@@ -21,7 +22,6 @@ void SpearThrown::Throw(float hspd, float vspd, sf::Texture speartex)
 
 void SpearThrown::Draw(sf::RenderWindow& window)
 {
-    cout << spear.getPosition().x << ":" << spear.getPosition().y << " " << vspeed << " " << hspeed << " " << spear.getRotation() << " " << isback << endl;
     vspeed += 0.25;
 
     if(hspeed >= 2)
@@ -34,4 +34,5 @@ void SpearThrown::Draw(sf::RenderWindow& window)
     isback = false;
 
     window.draw(spear);
+    dmg.Draw(window);
 }

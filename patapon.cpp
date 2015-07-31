@@ -273,6 +273,8 @@ void Patapon::draw(sf::RenderWindow& window)
 
     }
 
+    cout << x << ":" << y << endl;
+
     frame += 1;
 
     if(frame>=maxframe)
@@ -481,7 +483,8 @@ void Patapon::draw(sf::RenderWindow& window)
     if(y<window.getSize().y-45)
     vspeed += 0.25;
 
-    cout << vspeed << endl;
+    cout << hspeed << "/" << vspeed << endl;
+    cout << "baseposition: " << baseposition << endl;
 
     x += hspeed;
     y += vspeed;
