@@ -29,13 +29,15 @@ void DmgCount::Draw(sf::RenderWindow& window)
 
     std::ostringstream ss;
     ss << dmg;
-    text.setString(ss.str());
+    text.setString("pico i jego ochinchin");
+
+    std::cout << dmg << " + a:" << alpha << " >> " << text.getPosition().x << " : " << text.getPosition().y << std::endl;
 
     if(alpha >= 0.10)
     alpha -= 0.5;
 
     text.move(0,-1);
-    text.setColor(sf::Color(255,255,255,alpha));
+    text.setColor(sf::Color(177,0,0,alpha));
 
     window.draw(text);
 }

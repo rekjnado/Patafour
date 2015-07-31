@@ -31,6 +31,9 @@ Patapon::Patapon()
 
     pata.LoadAllWeapons();
     spear.spear.setPosition(0,4000);
+
+    vspeed = 0;
+    hspeed = 0;
 }
 
 void Patapon::LoadResources(PataponRes pata)
@@ -273,8 +276,6 @@ void Patapon::draw(sf::RenderWindow& window)
 
     }
 
-    cout << x << ":" << y << endl;
-
     frame += 1;
 
     if(frame>=maxframe)
@@ -482,9 +483,6 @@ void Patapon::draw(sf::RenderWindow& window)
 
     if(y<window.getSize().y-45)
     vspeed += 0.25;
-
-    cout << hspeed << "/" << vspeed << endl;
-    cout << "baseposition: " << baseposition << endl;
 
     x += hspeed;
     y += vspeed;
