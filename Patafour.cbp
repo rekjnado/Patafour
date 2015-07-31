@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Patafour" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Release">
+				<Option output="../latest-release/Patafour" prefix_auto="1" extension_auto="1" />
+				<Option object_output="../latest-release/obj/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Option use_console_runner="0" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="-std=c++0x" />
+					<Add option="-DSFML_STATIC" />
+					<Add directory="C:/Program Files (x86)/CodeBlocks/SFML-2.3.1/include" />
+					<Add directory="C:/Program Files (x86)/CodeBlocks/curl/include" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add option="-lws2_32" />
+					<Add library="sfml-graphics" />
+					<Add library="sfml-system" />
+					<Add library="sfml-window" />
+					<Add library="sfml-audio" />
+					<Add library="C:\Program Files (x86)\CodeBlocks\curl\lib\libcurl.a" />
+					<Add library="C:\Program Files (x86)\CodeBlocks\curl\lib\libcurldll.a" />
+					<Add directory="C:/Program Files (x86)/CodeBlocks/SFML-2.3.1/lib" />
+					<Add directory="C:/Program Files (x86)/CodeBlocks/curl/lib" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+		</Compiler>
+		<Unit filename="MaterTreeSubmenu.cpp" />
+		<Unit filename="MaterTreeSubmenu.h" />
+		<Unit filename="Patafour.cpp" />
+		<Unit filename="Patafour.h" />
+		<Unit filename="beatframe.cpp" />
+		<Unit filename="beatframe.h" />
+		<Unit filename="client.cpp" />
+		<Unit filename="client.h" />
+		<Unit filename="commandsystem.cpp" />
+		<Unit filename="commandsystem.h" />
+		<Unit filename="cutscene.cpp" />
+		<Unit filename="cutscene.h" />
+		<Unit filename="demomenu.cpp" />
+		<Unit filename="demomenu.h" />
+		<Unit filename="dummypon.cpp" />
+		<Unit filename="dummypon.h" />
+		<Unit filename="effects.cpp" />
+		<Unit filename="effects.h" />
+		<Unit filename="enemy.cpp" />
+		<Unit filename="enemy.h" />
+		<Unit filename="loadingsplash.cpp" />
+		<Unit filename="loadingsplash.h" />
+		<Unit filename="logindialog.cpp" />
+		<Unit filename="logindialog.h" />
+		<Unit filename="main.cpp" />
+		<Unit filename="mainmenu.cpp" />
+		<Unit filename="mainmenu.h" />
+		<Unit filename="mission.cpp" />
+		<Unit filename="mission.h" />
+		<Unit filename="missioncamera.cpp" />
+		<Unit filename="missioncamera.h" />
+		<Unit filename="newgameintro.cpp" />
+		<Unit filename="newgameintro.h" />
+		<Unit filename="opening.cpp" />
+		<Unit filename="opening.h" />
+		<Unit filename="organization.cpp" />
+		<Unit filename="organization.h" />
+		<Unit filename="patapolis.cpp" />
+		<Unit filename="patapolis.h" />
+		<Unit filename="patapon.cpp" />
+		<Unit filename="patapon.h" />
+		<Unit filename="pataponmulti.cpp" />
+		<Unit filename="pataponmulti.h" />
+		<Unit filename="projectile.cpp" />
+		<Unit filename="projectile.h" />
+		<Unit filename="resources.cpp" />
+		<Unit filename="resources.h" />
+		<Unit filename="savecontainer.cpp" />
+		<Unit filename="savecontainer.h" />
+		<Unit filename="server.cpp" />
+		<Unit filename="server.h" />
+		<Unit filename="shape.cpp" />
+		<Unit filename="shape.h" />
+		<Unit filename="spearthrown.cpp" />
+		<Unit filename="spearthrown.h" />
+		<Unit filename="sutra.cpp" />
+		<Unit filename="sutra.h" />
+		<Unit filename="tinyxml2.cpp" />
+		<Unit filename="tinyxml2.h" />
+		<Unit filename="tips.cpp" />
+		<Unit filename="tips.h" />
+		<Unit filename="worldmap.cpp" />
+		<Unit filename="worldmap.h" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
