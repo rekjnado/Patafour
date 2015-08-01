@@ -10,7 +10,7 @@ class DmgCount
     float alpha;
     bool crit;
     sf::Font font;
-    sf::Text text;
+    sf::Text dmgtext;
 
     DmgCount();
     void Draw(sf::RenderWindow& window);

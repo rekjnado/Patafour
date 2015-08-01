@@ -1,12 +1,21 @@
 #include <iostream>
 #include <SFML/Graphics.hpp>
 #include "dmgcount.h"
-#include <sstream>
+
+using namespace std;
 
 DmgCount::DmgCount()
 {
-    font.loadFromFile("resources/fonts/tekton.ttf");
-    text.setFont(font);
+    cout << "LOAD" << endl;
+    cout << "LOAD" << endl;
+    cout << "LOAD" << endl;
+    cout << "LOAD" << endl;
+    cout << "LOAD" << endl;
+    cout << "LOAD" << endl;
+
+    font.loadFromFile("resources/fonts/opensanslight.ttf");
+    dmgtext.setFont(font);
+    dmgtext.setCharacterSize(24);
 
     dmg = 0;
     alpha = 255;
@@ -17,27 +26,25 @@ void DmgCount::Draw(sf::RenderWindow& window)
 {
     if(crit == true)
     {
-    text.setCharacterSize(24);
-    text.setColor(sf::Color(177,0,0));
+    dmgtext.setCharacterSize(24);
+    dmgtext.setColor(sf::Color(177,0,0));
     }
 
     if(crit == false)
     {
-    text.setCharacterSize(16);
-    text.setColor(sf::Color(128,128,128));
+    dmgtext.setCharacterSize(16);
+    dmgtext.setColor(sf::Color(128,128,128));
     }
 
-    std::ostringstream ss;
-    ss << dmg;
-    text.setString("pico i jego ochinchin");
+    dmgtext.setString("why this isn't working");
 
-    std::cout << dmg << " + a:" << alpha << " >> " << text.getPosition().x << " : " << text.getPosition().y << std::endl;
+    std::cout << dmg << "crit: " << crit << " + a:" << alpha << " >> " << dmgtext.getPosition().x << " : " << dmgtext.getPosition().y << std::endl;
 
     if(alpha >= 0.10)
     alpha -= 0.5;
 
-    text.move(0,-1);
-    text.setColor(sf::Color(177,0,0,alpha));
+    dmgtext.move(0,-1);
+    dmgtext.setColor(sf::Color(0,0,0,alpha));
 
-    window.draw(text);
+    window.draw(dmgtext);
 }

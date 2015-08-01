@@ -6,7 +6,7 @@ using namespace std;
 
 SpearThrown::SpearThrown()
 {
-    dmg.text.setPosition(0,20000);
+    dmg.dmgtext.setPosition(0,20000);
     isback = false;
 }
 
@@ -34,5 +34,6 @@ void SpearThrown::Draw(sf::RenderWindow& window)
     isback = false;
 
     window.draw(spear);
+    cout << "drawing dmg" << endl;
     dmg.Draw(window);
 }
